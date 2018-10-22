@@ -7,4 +7,8 @@ class Order < ApplicationRecord
   def total_amount
   	items.inject(0) { |sum, item| sum + item.price }
   end
+
+  def id_name
+  	"#{id} - #{name}"
+  end
 end
